@@ -64,8 +64,8 @@ services:
     image: mariadb
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=
-      - MYSQL_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=admin
       - MYSQL_DATABASE=nextcloud-db
       - MYSQL_USER=nextcloud
     volumes:
@@ -76,7 +76,7 @@ services:
     container_name: nextcloud
     restart: always
     environment:
-      - MYSQL_PASSWORD=
+      - MYSQL_PASSWORD=admin
       - MYSQL_DATABASE=nextcloud-db
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=nextcloudDB
